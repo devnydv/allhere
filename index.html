@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Number Guessing Game</title>
+  <style>
+    body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  width: 90%;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  margin-bottom: 10px;
+}
+
+input {
+  width: 98%;
+  padding: q0px;
+  border: 1px solid #ccc;
+  margin-bottom: 1px;
+}
+
+button {
+  width: 100%;
+  background-color: #000;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+#feedback {
+  margin-top: 10px;
+  color: #000;
+}
+
+    
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Guess the Number</h1>
+    <p>I have chosen a number between 1 and 100. Can you guess it?</p>
+    <input type="number" id="guess" placeholder="Enter your guess">
+    <button type="submit" id="submit">Submit</button>
+    <p id="feedback"></p>
+  </div>
+
+  
+  <script>
+    console.log('Hello World!');
+var randomNumber = Math.floor(Math.random() * 100) + 1;
+
+document.getElementById("submit").onclick = function() {
+  var guess = document.getElementById("guess").value;
+
+  if (guess == randomNumber) {
+    document.getElementById("feedback").innerHTML = "Congratulations! You guessed the number correctly!";
+  } else if (guess > randomNumber) {
+    document.getElementById("feedback").innerHTML = "Your guess is too high.";
+  } else {
+    document.getElementById("feedback").innerHTML = "Your guess is too low.";
+  }
+};
+
+
+  </script>
+</body>
+</html>
