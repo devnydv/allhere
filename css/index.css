@@ -1,0 +1,27 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+nav{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightblue;
+    align-items: center;
+}
+
+nav div{
+    margin-left: 40px;
+    margin-top: 8px;
+    margin-bottom: 8px;
+}
+
+nav ul{
+    margin-right: 40px;
+    display: flex;
+}
+
+nav ul li{
+    list-style: none;
+    margin-right: 40px;
+}
